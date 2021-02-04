@@ -1,0 +1,11 @@
+#gameScreen{
+    border: 1px solid black;
+}
+
+#hop{
+    display: none;
+}
+
+#grain{
+    display:none;
+}
