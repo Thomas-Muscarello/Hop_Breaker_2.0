@@ -8,8 +8,8 @@ class ScoreScreen{
         .then(this.renderScores)
         .catch(()=> console.log("ERRROR"))
 
-        main.append(this.scoresContainer)
         this.renderNewGameBttn()
+        main.append(this.scoresContainer)
     }
 
     //Render
@@ -39,11 +39,35 @@ class ScoreScreen{
         newGameBttn.innerText = "New Game"
         newGameBttn.addEventListener("click", this.handleClickNewGame)
         main.append(newGameBttn)
+
     }
 
     //Listner
-    handleClickNewButton = ()=>{
-        new Game
+    handleClickNewGame = event =>{
+        event.preventDefault()
+        if(!this.restarted){
+            game.gamestate = GAMESTATE.MENU
+            game.reset(ctx);
+
+            game.gameWidth = GAME_WIDTH;
+            game.gameHeight = GAME_HEIGHT;
+            game.main = ""
+          
+            game.gamestate = GAMESTATE.MENU;
+            game.hop = new Hop(game);
+            game.mashpaddle = new Mashpaddle(game);
+            game.gameObjects = [];
+            game.grains = [];
+            game.score = 0;
+            game.lives = 1;
+          
+            new MoveMashPaddle(game.mashpaddle, game);
+
+            this.restarted = true
+            this.scoresContainer.remove()
+            event.target.remove()
+            
+        }
     }
 
     //To Delete Users

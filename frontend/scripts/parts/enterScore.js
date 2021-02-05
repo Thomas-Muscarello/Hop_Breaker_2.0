@@ -76,16 +76,29 @@ class EnterScore {
         new ScoreScreen
     }
 
-    handleClickNewGame = () =>{
-        game.gamestate = GAMESTATE.RESET;
-        lastTime= 0
-        game.main = ""
-        game.hop = new Hop(game);
-        game.mashpaddle = new Mashpaddle(game);
-        game.gameObjects = [];
-        game.grains = [];
-        game.score = 0;
-        game.lives = 1;
-        new MoveMashPaddle(game.mashpaddle, game);
+    handleClickNewGame = event =>{
+        event.preventDefault()
+        if(!this.restarted){
+            game.gamestate = GAMESTATE.MENU
+            game.reset(ctx);
+
+            game.gameWidth = GAME_WIDTH;
+            game.gameHeight = GAME_HEIGHT;
+            game.main = ""
+          
+            game.gamestate = GAMESTATE.MENU;
+            game.hop = new Hop(game);
+            game.mashpaddle = new Mashpaddle(game);
+            game.gameObjects = [];
+            game.grains = [];
+            game.score = 0;
+            game.lives = 1;
+          
+            new MoveMashPaddle(game.mashpaddle, game);
+
+            this.restarted = true
+            this.html.remove()
+            
+        }
     }
 }

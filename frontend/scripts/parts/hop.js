@@ -26,7 +26,7 @@ class Hop{
         this.position.x += this.speed.x;
         this.position.y += this.speed.y;
 
-        //Get the ball to bouce of walls; Added .size to ensure it did go past line.
+        //Get the ball to bouce of walls; Added .size to ensure it didnt go past line.
 
         if(this.position.x + this.size > this.gameWidth || this.position.x <0){
             this.speed.x = -this.speed.x;

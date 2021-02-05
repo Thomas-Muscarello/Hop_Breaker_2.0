@@ -17,7 +17,9 @@ class Grain{
         if(hopHit(this.game.hop, this)){
             this.game.hop.speed.y = -this.game.hop.speed.y;
 
+            //Gets hit by ball
             this.breakGrain = true;
+            //Add to score
             game.score ++
         }
     }

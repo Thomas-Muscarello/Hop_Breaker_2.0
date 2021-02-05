@@ -27,12 +27,13 @@ class API{
     getScore = (scoreID) => fetch(this.scoresURL + `/${scoreID}`).then(this.parseJSON);
     
     //Post
+    
+    //Fetch to Post new User
     postUser= body => fetch(this.usersURL,{
         method: "POST",
         headers: this.headers,
         body: JSON.stringify(body)
     }).then(this.parseJSON)
-    //Fetch to Post new User
 
     // Fetch Post new User and Score
     postUserScore = body => fetch(this.scoresURL,{

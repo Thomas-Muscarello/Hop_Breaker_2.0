@@ -20,8 +20,7 @@ const GAMESTATE = {
   };
 
 //Start New Game
-let game = new Game(GAME_WIDTH,GAME_HEIGHT);
-
+let game =new Game(GAME_WIDTH,GAME_HEIGHT);
 
 function gameLoop(timeStamp){
   //calculate how much time has passed
@@ -35,6 +34,7 @@ function gameLoop(timeStamp){
   game.update(deltaTime);
   game.draw(ctx);
   game.enterScore();
+  
 
   //Call game again with new time stamp
   requestAnimationFrame(gameLoop);
