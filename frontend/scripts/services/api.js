@@ -27,7 +27,7 @@ class API{
     getScore = (scoreID) => fetch(this.scoresURL + `/${scoreID}`).then(this.parseJSON);
     
     //Post
-    
+
     //Fetch to Post new User
     postUser= body => fetch(this.usersURL,{
         method: "POST",
@@ -42,7 +42,7 @@ class API{
         body: JSON.stringify(body)
     }).then(this.parseJSON)
 
-    //Delete
+    //Delete method.... Commented out becuase Users shouldn't be able to delete anyone they want but it is still needed during testing
   /*  deleteUser = (id) => {
         return fetch(this.usersURL + `/${id}`,{
             method: "DELETE",

@@ -1,6 +1,6 @@
 class ScoreScreen{
     constructor(){
-        main.innerHTML=""
+        div.innerHTML=""
 
         this.scoresContainer = document.createElement('ol')
 
@@ -9,10 +9,11 @@ class ScoreScreen{
         .catch(()=> console.log("ERRROR"))
 
         this.renderNewGameBttn()
-        main.append(this.scoresContainer)
+        div.append(this.scoresContainer)
     }
 
     //Render
+    //Show all Scores with Users
     renderScores = users =>{
         users.forEach(user => {
             const li = document.createElement('li')
@@ -27,7 +28,7 @@ class ScoreScreen{
             user.scores.forEach(score => {
                 const p = document.createElement("p")
                 p.className = "score-listing"
-                p.innerText = `${user.name} - Points: ${score.points}`
+                p.innerText = `User Name: ${user.name} - Points: ${score.points}`
                 li.append(p)
             })
             this.scoresContainer.append(li)
@@ -38,7 +39,7 @@ class ScoreScreen{
         const newGameBttn = document.createElement('button')
         newGameBttn.innerText = "New Game"
         newGameBttn.addEventListener("click", this.handleClickNewGame)
-        main.append(newGameBttn)
+        div.append(newGameBttn)
 
     }
 
@@ -51,7 +52,7 @@ class ScoreScreen{
 
             game.gameWidth = GAME_WIDTH;
             game.gameHeight = GAME_HEIGHT;
-            game.main = ""
+            game.div = ""
           
             game.gamestate = GAMESTATE.MENU;
             game.hop = new Hop(game);
@@ -78,3 +79,5 @@ class ScoreScreen{
     }
     */
 }
+
+//scores in decending order

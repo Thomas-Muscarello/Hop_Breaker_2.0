@@ -1,5 +1,5 @@
 #gameScreen{
-    border: 1px solid black;
+    border: 15px solid black;
 }
 
 #hop{
@@ -8,4 +8,10 @@
 
 #grain{
     display:none;
+}
+
+#text-box{
+    width: 550px;
+    border: 15px solid black;
+    padding: 50px;
 }

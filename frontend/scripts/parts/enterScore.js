@@ -2,7 +2,7 @@
 class EnterScore {
     constructor(score){
         this.score = score
-        main.innerHTML = ""
+        div.innerHTML = ""
 
         this.html = document.createElement('div')
         this.html.id = "score-container"
@@ -11,7 +11,7 @@ class EnterScore {
         this.renderForm();
         this.renderButtn();
 
-        main.append(this.html);
+        div.append(this.html);
 
     }
 
@@ -84,7 +84,7 @@ class EnterScore {
 
             game.gameWidth = GAME_WIDTH;
             game.gameHeight = GAME_HEIGHT;
-            game.main = ""
+            game.div = ""
           
             game.gamestate = GAMESTATE.MENU;
             game.hop = new Hop(game);

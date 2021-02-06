@@ -1,5 +1,6 @@
 const api = new API
 const main = document.querySelector('main')
+const div = document.querySelector('div')
 let canvas = document.getElementById("gameScreen");
 let ctx = canvas.getContext("2d");
 let lastTime = 0;
