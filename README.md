@@ -24,7 +24,7 @@ You will want to run ```rails s``` in one terminal while in /backend, and than i
 Eventually I can see myself adding to this app that allows other users to create a user login.
 
 ## Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/Thomas-Muscarello/beer_me. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Thomas-Muscarello/Hop_Breaker_2.0 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 ## License
 The gem is available as open source under the terms of the https://opensource.org/licenses/MIT.
